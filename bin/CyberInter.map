@@ -1,0 +1,469 @@
+ CyberInter
+
+ Timestamp is 51eb9411 (Sun Jul 21 15:56:01 2013)
+
+ Preferred load address is 00010000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000bcf6H .text                   CODE
+ 0002:00000000 0000018cH .idata$5                DATA
+ 0002:00000190 00000068H .rdata                  DATA
+ 0002:000001f8 00000043H .rdata$debug            DATA
+ 0002:00000240 00000004H .rdata$sxdata           DATA
+ 0002:00000248 0000000cH .xdata$x                DATA
+ 0003:00000000 0000275cH .data                   DATA
+ 0003:00002760 00000b68H .bss                    DATA
+ 0004:00000000 00000383H PAGE                    CODE
+ 0005:00000000 0000014aH INIT                    CODE
+ 0005:0000014c 0000003cH .idata$2                CODE
+ 0005:00000188 00000014H .idata$3                CODE
+ 0005:0000019c 0000018cH .idata$4                CODE
+ 0005:00000328 0000080cH .idata$6                CODE
+ 0006:00000000 00000058H .rsrc$01                DATA
+ 0006:00000060 000002d8H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000000       _Init@4                    000102e0 f   cybersys.obj
+ 0001:00000150       _kprintf                   00010430 f i cybersys.obj
+ 0001:00000230       _InitializeListHead@4      00010510 f i cybersys.obj
+ 0001:00000250       _KeInitializeSpinLock@4    00010530 f i cybersys.obj
+ 0001:00000260       _IoGetCurrentIrpStackLocation@4 00010540 f i cybersys.obj
+ 0001:000002b0       _IoMarkIrpPending@4        00010590 f i cybersys.obj
+ 0001:000002e0       _dumphex@8                 000105c0 f   utils.obj
+ 0001:000005a0       _LockResource@8            00010880 f   utils.obj
+ 0001:00000610       _UnlockResource@4          000108f0 f   utils.obj
+ 0001:00000660       _GetWindowsVersion@0       00010940 f   utils.obj
+ 0001:000006f0       _KKGetKeyValue@16          000109d0 f   utils.obj
+ 0001:00000870       _QueryRegistryValueDummyRoutine@24 00010b50 f   utils.obj
+ 0001:00000880       _QueryRegistryValue@20     00010b60 f   utils.obj
+ 0001:000008f0       _WPOFF@0                   00010bd0 f   utils.obj
+ 0001:00000920       _WPON@0                    00010c00 f   utils.obj
+ 0001:00000930       _GetMoudleBase@8           00010c10 f   utils.obj
+ 0001:00000a90       _EnumKernelModules@8       00010d70 f   utils.obj
+ 0001:00000c60       _CleanSeAuditProcessCreationInfo@4 00010f40 f   utils.obj
+ 0001:00000d00       _GetProcessImagePath@12    00010fe0 f   utils.obj
+ 0001:00001270       _FindExportedRoutineAddrByName@8 00011550 f   utils.obj
+ 0001:000013b0       _SendNetBufferCallBackWin7@8 00011690 f   filter_win7.obj
+ 0001:000013e0       _RecvNetBufferCallBackWin7@8 000116c0 f   filter_win7.obj
+ 0001:00001410       _KKMPSendNetBufferLists@16 000116f0 f   filter_win7.obj
+ 0001:00001480       _KKNdisMIndicateReceiveNetBufferListsInternal_vista_later@20 00011760 f   filter_win7.obj
+ 0001:000014f0       _CopyBytesFromNetBuffer@12 000117d0 f   filter_win7.obj
+ 0001:00001600       _MyNdisAllocateNetBufferAndNetBufferList@24 000118e0 f   filter_win7.obj
+ 0001:00001670       _FreeNetBufferList@4       00011950 f   filter_win7.obj
+ 0001:00001780       _ReleaseNetBufferListPool@0 00011a60 f   filter_win7.obj
+ 0001:000017c0       _AllocateNetBufferList@8   00011aa0 f   filter_win7.obj
+ 0001:00001930       _copy_buffer_to_netbuffer@12 00011c10 f   filter_win7.obj
+ 0001:00001a40       _my_WSendPacketsHandlerComplete@12 00011d20 f   filter_xp.obj
+ 0001:00001ad0       _FreePacket@4              00011db0 f   filter_xp.obj
+ 0001:00001ba0       _FreePacket2@4             00011e80 f   filter_xp.obj
+ 0001:00001c00       _my_NdisSendComplete@12    00011ee0 f   filter_xp.obj
+ 0001:00001c90       _my_WSendHandler@12        00011f70 f   filter_xp.obj
+ 0001:00001d00       _my_WSendPacketsHandler@12 00011fe0 f   filter_xp.obj
+ 0001:00001d80       _my_ethFilterDprIndicateReceivePacket@12 00012060 f   filter_xp.obj
+ 0001:00001e10       _PacketSendCallback@8      000120f0 f   filter_xp.obj
+ 0001:00001e60       _PacketRecvCallback@12     00012140 f   filter_xp.obj
+ 0001:00001ef0       _UnHookAndRelease@0        000121d0 f   miniport_hook.obj
+ 0001:00001ff0       _UnHook@0                  000122d0 f   miniport_hook.obj
+ 0001:00002000       _ReleaseHookInfo@0         000122e0 f   miniport_hook.obj
+ 0001:000020c0       _GetOldHandler@8           000123a0 f   miniport_hook.obj
+ 0001:000021a0       _GetProtocolHeader@0       00012480 f   miniport_hook.obj
+ 0001:00002210       _GetMDriverBlockHeader@0   000124f0 f   miniport_hook.obj
+ 0001:00002240       _StartMiniportHookEx@0     00012520 f   miniport_hook.obj
+ 0001:000022d0       _InitMiniPortHook@0        000125b0 f   miniport_hook.obj
+ 0001:000023c0       _PtBindAdapter@20          000126a0 f   miniport_hook.obj
+ 0001:000023d0       _PtUnbindAdapter@12        000126b0 f   miniport_hook.obj
+ 0001:000023e0       _MPDevicePnPEvent@16       000126c0 f   miniport_hook.obj
+ 0001:000023f0       _MPAdapterShutdown@4       000126d0 f   miniport_hook.obj
+ 0001:00002400       _IsListEmpty@4             000126e0 f i miniport_hook.obj
+ 0001:00002420       _RemoveHeadList@4          00012700 f i miniport_hook.obj
+ 0001:00002450       _NdisProtOpenAdapterComplete@12 00012730 f   miniport_hookWin7.obj
+ 0001:00002460       _NdisProtCloseAdapterComplete@8 00012740 f   miniport_hookWin7.obj
+ 0001:00002470       _NdisprotUnbindAdapterWin7@8 00012750 f   miniport_hookWin7.obj
+ 0001:00002480       _NdisprotBindAdapter@12    00012760 f   miniport_hookWin7.obj
+ 0001:00002490       _GetProtocolHeaderWin7@0   00012770 f   miniport_hookWin7.obj
+ 0001:00002570       _HookRecvWin7@4            00012850 f   miniport_hookWin7.obj
+ 0001:00002690       _HookSendWIN7@4            00012970 f   miniport_hookWin7.obj
+ 0001:00002810       _DoHookExWin7@4            00012af0 f   miniport_hookWin7.obj
+ 0001:00002950       _InsertHeadList@8          00012c30 f i miniport_hookWin7.obj
+ 0001:00002990       _HookSendXP@4              00012c70 f   miniport_hookXp.obj
+ 0001:00002cf0       _HookRecvXP@4              00012fd0 f   miniport_hookXp.obj
+ 0001:00002eb0       _DoHookExXP@4              00013190 f   miniport_hookXp.obj
+ 0001:00002ff0       _GetProtocolHeaderXP@0     000132d0 f   miniport_hookXp.obj
+ 0001:000030a0       _EnumNetCards@0            00013380 f   NetcardsInfo.obj
+ 0001:000035e0       _ReleaseNetCardsInfo@0     000138c0 f   NetcardsInfo.obj
+ 0001:00003650       _IsPhysicalMiniport@4      00013930 f   NetcardsInfo.obj
+ 0001:000036d0       _GetAdapterInfo@8          000139b0 f   NetcardsInfo.obj
+ 0001:00003fd0       _GetNicNameByGUID@8        000142b0 f   NetcardsInfo.obj
+ 0001:000041a0       _FixGatewayMac@8           00014480 f   NetcardsInfo.obj
+ 0001:00004330       _GetGatewayMacByRecvPacket@12 00014610 f   NetcardsInfo.obj
+ 0001:00004350       _GetAdapterInfoEx@8        00014630 f   NetcardsInfo.obj
+ 0001:00004360       _GetConnectInfo@12         00014640 f   connectionstatus.obj
+ 0001:00004600       _GetTcpConnectCount@4      000148e0 f   connectionstatus.obj
+ 0001:00004890       _GetUDPConnectCount@4      00014b70 f   connectionstatus.obj
+ 0001:00004af0       _GetNetworkInfoXP@8        00014dd0 f   connectionstatus.obj
+ 0001:00004c90       _GetNetworkInfoWin7@8      00014f70 f   connectionstatus.obj
+ 0001:00004f00       _GetTcpipDispatchAddress@0 000151e0 f   connectionstatus.obj
+ 0001:00004f70       _EnumConnections@8         00015250 f   connectionstatus.obj
+ 0001:00005000       _Get_TCPQueryInformationEx_Addr@0 000152e0 f   connectionstatus.obj
+ 0001:00005140       _EnumTcpPortInformationWin7@8 00015420 f   connectionstatus.obj
+ 0001:000056b0       _EnumUdpPortInformationWin7@8 00015990 f   connectionstatus.obj
+ 0001:00005ad0       _GetObjectByName@12        00015db0 f   connectionstatus.obj
+ 0001:00005ba0       _KKNsiEnumerateObjectsAllParametersEx@4 00015e80 f   connectionstatus.obj
+ 0001:00005c40       _EnumTcpPortInformationExWin7@8 00015f20 f   connectionstatus.obj
+ 0001:00006080       _EnumUdpPortInformationExWin7@8 00016360 f   connectionstatus.obj
+ 0001:00006340       _FormatTcpStruct@12        00016620 f   connectionstatus.obj
+ 0001:00006670       _FormatUdpStruct@12        00016950 f   connectionstatus.obj
+ 0001:00006750       _IoGetNextIrpStackLocation@4 00016a30 f i connectionstatus.obj
+ 0001:000067a0       _InitFW@0                  00016a80 f   firewall.obj
+ 0001:000067f0       _UninitFW@0                00016ad0 f   firewall.obj
+ 0001:00006810       _GetTcpipProtocolBlock@0   00016af0 f   firewall.obj
+ 0001:000068c0       _BypassTcpipArpRcv@28      00016ba0 f   firewall.obj
+ 0001:00006910       _FindPort@8                00016bf0 f   firewall.obj
+ 0001:000069d0       _AskUserWorker@8           00016cb0 f   firewall.obj
+ 0001:00006b40       _KKNewTcpipArpRcv@28       00016e20 f   firewall.obj
+ 0001:00006e90       _FWReleasePortRuleList@0   00017170 f   firewall.obj
+ 0001:00006f80       _FWUnhookTcpipRecvHandler@0 00017260 f   firewall.obj
+ 0001:000070a0       _FWHookTcpipRecvHandler@0  00017380 f   firewall.obj
+ 0001:00007210       _SetupPortStatus@8         000174f0 f   firewall.obj
+ 0001:00007370       _ResponsePortAskWorkerForIndicateupPacket@8 00017650 f   firewall.obj
+ 0001:00007460       _ResponsePortAsk@4         00017740 f   firewall.obj
+ 0001:000075f0       _ReleasePenddingCheckPortIrp@0 000178d0 f   firewall.obj
+ 0001:00007650       _GetPortRules@8            00017930 f   firewall.obj
+ 0001:000077b0       _FWDispatch@8              00017a90 f   firewall.obj
+ 0001:000079a0       _GetTcpipArpRcvOldHandler@8 00017c80 f i firewall.obj
+ 0001:00007a70       _CheckIsSynConnectPacket@4 00017d50 f i firewall.obj
+ 0001:00007aa0       _UnInitPatch@0             00017d80 f   PatchSinffer.obj
+ 0001:00007ac0       _PatchDispatch@8           00017da0 f   PatchSinffer.obj
+ 0001:00007c30       _myNdisSendXForDontLoopback@8 00017f10 f   PatchSinffer.obj
+ 0001:00007c80       _PatchRestoreDontLoopbackForXp@0 00017f60 f   PatchSinffer.obj
+ 0001:00007cc0       _PatchDontLoopbackForXp@0  00017fa0 f   PatchSinffer.obj
+ 0001:00007d40       _GetProtocolListWin7@8     00018020 f   PatchSinffer.obj
+ 0001:00007e70       _GetProtocolList@8         00018150 f   PatchSinffer.obj
+ 0001:00007fc0       _NewNPFReceiveHandler@0    000182a0 f   patchws.obj
+ 0001:00007fd0       _NewNPFReceivePacketHandler@0 000182b0 f   patchws.obj
+ 0001:00007fe0       _UnDoPatchWS2@8            000182c0 f   patchws.obj
+ 0001:00008090       _DoPatchWS2@8              00018370 f   patchws.obj
+ 0001:00008190       _GetProtocolBlockXP@8      00018470 f   patchws.obj
+ 0001:000082b0       _DoPatchWS@0               00018590 f   patchws.obj
+ 0001:00008410       _CheckProtocolExist@8      000186f0 f   patchws.obj
+ 0001:00008520       _NewReceiveNetBufferListsHandler@20 00018800 f   patchwsWin7.obj
+ 0001:00008530       _UndoPatchwsWin7@0         00018810 f   patchwsWin7.obj
+ 0001:00008590       _doPatchwsWin7@8           00018870 f   patchwsWin7.obj
+ 0001:00008710       _GetTargetProtocolBlockWin7@8 000189f0 f   patchwsWin7.obj
+ 0001:00008830       _WSCatcherPacketCallback@4 00018b10 f   WScatcher.obj
+ 0001:000089e0       _WSWorkThread@8            00018cc0 f   WScatcher.obj
+ 0001:00008b70       _NdisQueryPacket@20        00018e50 f i WScatcher.obj
+ 0001:00008cd0       _UpdateRecvPacket@4        00018fb0 f   my_packet_redir.obj
+ 0001:00008fc0       _RedirectSendPacket@12     000192a0 f   my_packet_redir.obj
+ 0001:000092c0       _copy_buffer_to_packet@12  000195a0 f   my_packet_redir.obj
+ 0001:000093f0       _checksum@8                000196d0 f   my_packet_redir.obj
+ 0001:00009460       _PacketCheckSum@4          00019740 f   my_packet_redir.obj
+ 0001:00009770       _GetPktPayload@16          00019a50 f   my_packet_redir.obj
+ 0001:000098a0       _htons@4                   00019b80 f   my_packet_redir.obj
+ 0001:000098e0       _inet_addr@4               00019bc0 f   my_packet_redir.obj
+ 0001:000099f0       _AddOrDelInfo@12           00019cd0 f   my_packet_redir.obj
+ 0001:00009b00       _AddRedirectInfo@12        00019de0 f   my_packet_redir.obj
+ 0001:00009cd0       _ReleaseRedirectInfo@0     00019fb0 f   my_packet_redir.obj
+ 0001:00009dc0       _ZeroRedirectInfoInList@4  0001a0a0 f   my_packet_redir.obj
+ 0001:00009e00       _RedirectRecvCallback@4    0001a0e0 f   my_packet_redir.obj
+ 0001:00009e30       _RedirectSendCallback@4    0001a110 f   my_packet_redir.obj
+ 0001:00009e80       _CheckRecvPacketNeed@8     0001a160 f i my_packet_redir.obj
+ 0001:0000a120       _CheckSendPacketNeed@8     0001a400 f i my_packet_redir.obj
+ 0001:0000a3d0       _RedirectSendWin7@4        0001a6b0 f   RedirectWin7.obj
+ 0001:0000a690       _RedirectRecvWin7@4        0001a970 f   RedirectWin7.obj
+ 0001:0000a950       _RedirectNetBufferSendCallbackWin7@8 0001ac30 f   RedirectWin7.obj
+ 0001:0000a9d0       _RedirectNetBufferRecvCallbackWin7@8 0001acb0 f   RedirectWin7.obj
+ 0001:0000aa50       _UdpRecvCallback@4         0001ad30 f   udpTraffic.obj
+ 0001:0000aa70       _TerminateUdpWorkItemThread@0 0001ad50 f   udpTraffic.obj
+ 0001:0000aa90       _HandleSendIRP@4           0001ad70 f   udpTraffic.obj
+ 0001:0000ab10       _UdpWorkItemThread@4       0001adf0 f   udpTraffic.obj
+ 0001:0000aba0       _MakePacketByMem@8         0001ae80 f   udpTraffic.obj
+ 0001:0000ad50       _AllocatePacketPools@0     0001b030 f   udpTraffic.obj
+ 0001:0000adc0       _MPFreeAllPacketPools@0    0001b0a0 f   udpTraffic.obj
+ 0001:0000ae10       _MakeUdpBuffer@12          0001b0f0 f   udpTraffic.obj
+ 0001:0000b0f0       _MiniportSendUdp@8         0001b3d0 f   udpTraffic.obj
+ 0001:0000b390       _NetBufferListSinfferCallback@8 0001b670 f   WScatcherWin7.obj
+ 0001:0000b5b0       _MyNdisCopyFromNetBufferToNetBuffer@24 0001b890 f   WScatcherWin7.obj
+ 0001:0000b630       _NetBufferListSinfferCallbackWin7@8 0001b910 f   WScatcherWin7.obj
+ 0001:0000b810       _WSWorkThreadWin7@8        0001baf0 f   WScatcherWin7.obj
+ 0001:0000b940       _WSWorkThreadWin7ForNdis5@8 0001bc20 f   WScatcherWin7.obj
+ 0001:0000bace       _ZwClose@4                 0001bdae f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bad4       _ObReferenceObjectByHandle@24 0001bdb4 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bada       _PsCreateSystemThread@28   0001bdba f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bae0       _KeInitializeEvent@12      0001bdc0 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bae6       _DbgPrint                  0001bdc6 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000baec       __vsnprintf                0001bdcc f   ntoskrnl:ntoskrnl.exe
+ 0001:0000baf2       _memcpy                    0001bdd2 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000baf8       _strlen                    0001bdd8 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bafe       _memset                    0001bdde f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb04       _IoDeleteDevice@4          0001bde4 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb0a       _IoDeleteSymbolicLink@4    0001bdea f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb10       _IoCreateSymbolicLink@8    0001bdf0 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb16       _IoCreateDevice@28         0001bdf6 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb1c       _RtlInitUnicodeString@8    0001bdfc f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb22       @IofCompleteRequest@8      0001be02 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb28       _KeSetEvent@12             0001be08 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb2e       @ExfInterlockedInsertHeadList@12 0001be0e f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb34       @ObfDereferenceObject@4    0001be14 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb3a       _KeWaitForSingleObject@20  0001be1a f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb40       _RtlAssert@16              0001be20 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb46       _ExAcquireResourceSharedLite@8 0001be26 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb4c       _ExAcquireResourceExclusiveLite@8 0001be2c f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb52       _KeEnterCriticalRegion@0   0001be32 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb58       _KeLeaveCriticalRegion@0   0001be38 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb5e       @ExReleaseResourceLite@4   0001be3e f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb64       _PsGetVersion@16           0001be44 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb6a       _ExFreePoolWithTag@8       0001be4a f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb70       _ExAllocatePoolWithTag@12  0001be50 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb76       _ZwQueryValueKey@24        0001be56 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb7c       _ZwOpenKey@12              0001be5c f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb82       _RtlQueryRegistryValues@20 0001be62 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb88       __strnicmp                 0001be68 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb8e       _ZwQuerySystemInformation@16 0001be6e f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb94       _strcmp                    0001be74 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bb9a       _strrchr                   0001be7a f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bba0       _RtlCompareMemory@12       0001be80 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bba6       _ZwQuerySymbolicLinkObject@12 0001be86 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbac       _ZwOpenSymbolicLinkObject@12 0001be8c f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbb2       _memmove                   0001be92 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbb8       _IoQueryFileDosDeviceName@8 0001be98 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbbe       _ZwCreateFile@44           0001be9e f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbc4       _ObOpenObjectByPointer@28  0001bea4 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbca       _PsLookupProcessByProcessId@8 0001beaa f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbd0       _MmGetSystemRoutineAddress@4 0001beb0 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbd6       _RtlImageDirectoryEntryToData@16 0001beb6 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbdc       _MmMapLockedPagesSpecifyCache@24 0001bebc f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbe2       _IoFreeMdl@4               0001bec2 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbe8       _MmBuildMdlForNonPagedPool@4 0001bec8 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbee       _IoAllocateMdl@20          0001bece f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbf4       _RtlUnicodeStringToAnsiString@12 0001bed4 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bbfa       _wcsstr                    0001beda f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc00       __wcsupr                   0001bee0 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc06       _RtlFreeAnsiString@4       0001bee6 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc0c       @ExfInterlockedRemoveHeadList@8 0001beec f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc12       _RtlPrefixUnicodeString@12 0001bef2 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc18       _ZwDeviceIoControlFile@40  0001bef8 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc1e       _ZwOpenFile@24             0001befe f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc24       _RtlAppendUnicodeStringToString@8 0001bf04 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc2a       _RtlAppendUnicodeToString@8 0001bf0a f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc30       _ZwEnumerateKey@24         0001bf10 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc36       _ZwQueryKey@20             0001bf16 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc3c       @IofCallDriver@8           0001bf1c f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc42       _IoBuildDeviceIoControlRequest@36 0001bf22 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc48       _IoGetRelatedDeviceObject@4 0001bf28 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc4e       _ObReferenceObjectByName@32 0001bf2e f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc54       _strcpy                    0001bf34 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc5a       _RtlEqualUnicodeString@12  0001bf3a f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc60       _IoFreeWorkItem@4          0001bf40 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc66       _IoQueueWorkItem@16        0001bf46 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc6c       _IoAllocateWorkItem@4      0001bf4c f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc72       _RtlFreeUnicodeString@4    0001bf52 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc78       _RtlAnsiStringToUnicodeString@12 0001bf58 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc7e       _RtlInitAnsiString@8       0001bf5e f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc84       _MmIsAddressValid@4        0001bf64 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc8a       __except_handler3          0001bf6a f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc90       _MmMapLockedPages@8        0001bf70 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc96       _atoi                      0001bf76 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bc9c       _strncpy                   0001bf7c f   ntoskrnl:ntoskrnl.exe
+ 0001:0000bca2       _KeGetCurrentIrql@0        0001bf82 f   hal:HAL.dll
+ 0001:0000bca8       @KfRaiseIrql@4             0001bf88 f   hal:HAL.dll
+ 0001:0000bcae       @KfLowerIrql@4             0001bf8e f   hal:HAL.dll
+ 0001:0000bcb4       _NdisInitializeReadWriteLock@4 0001bf94 f   ndis:NDIS.SYS
+ 0001:0000bcba       _NdisFreePacket@4          0001bf9a f   ndis:NDIS.SYS
+ 0001:0000bcc0       _NdisUnchainBufferAtFront@8 0001bfa0 f   ndis:NDIS.SYS
+ 0001:0000bcc6       _NdisReleaseReadWriteLock@8 0001bfa6 f   ndis:NDIS.SYS
+ 0001:0000bccc       _NdisAcquireReadWriteLock@12 0001bfac f   ndis:NDIS.SYS
+ 0001:0000bcd2       _NdisGetRoutineAddress@4   0001bfb2 f   ndis:NDIS.SYS
+ 0001:0000bcd8       _NdisDeregisterProtocol@8  0001bfb8 f   ndis:NDIS.SYS
+ 0001:0000bcde       _NdisRegisterProtocol@16   0001bfbe f   ndis:NDIS.SYS
+ 0001:0000bce4       _NdisAllocatePacket@12     0001bfc4 f   ndis:NDIS.SYS
+ 0001:0000bcea       _NdisAllocatePacketPoolEx@20 0001bfca f   ndis:NDIS.SYS
+ 0001:0000bcf0       _NdisFreePacketPool@4      0001bfd0 f   ndis:NDIS.SYS
+ 0002:00000000       __imp__KeGetCurrentIrql@0  0001bfe0     hal:HAL.dll
+ 0002:00000004       __imp_@KfLowerIrql@4       0001bfe4     hal:HAL.dll
+ 0002:00000008       __imp_@KfRaiseIrql@4       0001bfe8     hal:HAL.dll
+ 0002:0000000c       \177HAL_NULL_THUNK_DATA    0001bfec     hal:HAL.dll
+ 0002:00000010       __imp__NdisDeregisterProtocol@8 0001bff0     ndis:NDIS.SYS
+ 0002:00000014       __imp__NdisGetRoutineAddress@4 0001bff4     ndis:NDIS.SYS
+ 0002:00000018       __imp__NdisAcquireReadWriteLock@12 0001bff8     ndis:NDIS.SYS
+ 0002:0000001c       __imp__NdisRegisterProtocol@16 0001bffc     ndis:NDIS.SYS
+ 0002:00000020       __imp__NdisUnchainBufferAtFront@8 0001c000     ndis:NDIS.SYS
+ 0002:00000024       __imp__NdisFreePacket@4    0001c004     ndis:NDIS.SYS
+ 0002:00000028       __imp__NdisInitializeReadWriteLock@4 0001c008     ndis:NDIS.SYS
+ 0002:0000002c       __imp__NdisAllocatePacket@12 0001c00c     ndis:NDIS.SYS
+ 0002:00000030       __imp__NdisAllocatePacketPoolEx@20 0001c010     ndis:NDIS.SYS
+ 0002:00000034       __imp__NdisReleaseReadWriteLock@8 0001c014     ndis:NDIS.SYS
+ 0002:00000038       __imp__NdisFreePacketPool@4 0001c018     ndis:NDIS.SYS
+ 0002:0000003c       \177NDIS_NULL_THUNK_DATA   0001c01c     ndis:NDIS.SYS
+ 0002:00000040       __imp__KeSetEvent@12       0001c020     ntoskrnl:ntoskrnl.exe
+ 0002:00000044       __imp_@ExfInterlockedInsertHeadList@12 0001c024     ntoskrnl:ntoskrnl.exe
+ 0002:00000048       __imp_@ObfDereferenceObject@4 0001c028     ntoskrnl:ntoskrnl.exe
+ 0002:0000004c       __imp__KeWaitForSingleObject@20 0001c02c     ntoskrnl:ntoskrnl.exe
+ 0002:00000050       __imp__RtlAssert@16        0001c030     ntoskrnl:ntoskrnl.exe
+ 0002:00000054       __imp__ExAcquireResourceSharedLite@8 0001c034     ntoskrnl:ntoskrnl.exe
+ 0002:00000058       __imp__ExAcquireResourceExclusiveLite@8 0001c038     ntoskrnl:ntoskrnl.exe
+ 0002:0000005c       __imp__KeEnterCriticalRegion@0 0001c03c     ntoskrnl:ntoskrnl.exe
+ 0002:00000060       __imp__KeLeaveCriticalRegion@0 0001c040     ntoskrnl:ntoskrnl.exe
+ 0002:00000064       __imp_@ExReleaseResourceLite@4 0001c044     ntoskrnl:ntoskrnl.exe
+ 0002:00000068       __imp__PsGetVersion@16     0001c048     ntoskrnl:ntoskrnl.exe
+ 0002:0000006c       __imp__ExFreePoolWithTag@8 0001c04c     ntoskrnl:ntoskrnl.exe
+ 0002:00000070       __imp__ExAllocatePoolWithTag@12 0001c050     ntoskrnl:ntoskrnl.exe
+ 0002:00000074       __imp__ZwQueryValueKey@24  0001c054     ntoskrnl:ntoskrnl.exe
+ 0002:00000078       __imp__ZwOpenKey@12        0001c058     ntoskrnl:ntoskrnl.exe
+ 0002:0000007c       __imp__RtlQueryRegistryValues@20 0001c05c     ntoskrnl:ntoskrnl.exe
+ 0002:00000080       __imp___strnicmp           0001c060     ntoskrnl:ntoskrnl.exe
+ 0002:00000084       __imp__ZwQuerySystemInformation@16 0001c064     ntoskrnl:ntoskrnl.exe
+ 0002:00000088       __imp__strcmp              0001c068     ntoskrnl:ntoskrnl.exe
+ 0002:0000008c       __imp__strrchr             0001c06c     ntoskrnl:ntoskrnl.exe
+ 0002:00000090       __imp__RtlCompareMemory@12 0001c070     ntoskrnl:ntoskrnl.exe
+ 0002:00000094       __imp__ZwQuerySymbolicLinkObject@12 0001c074     ntoskrnl:ntoskrnl.exe
+ 0002:00000098       __imp__ZwOpenSymbolicLinkObject@12 0001c078     ntoskrnl:ntoskrnl.exe
+ 0002:0000009c       __imp__memmove             0001c07c     ntoskrnl:ntoskrnl.exe
+ 0002:000000a0       __imp__IoQueryFileDosDeviceName@8 0001c080     ntoskrnl:ntoskrnl.exe
+ 0002:000000a4       __imp__IoFileObjectType    0001c084     ntoskrnl:ntoskrnl.exe
+ 0002:000000a4       _IoFileObjectType          0001c084     ntoskrnl:ntoskrnl.exe
+ 0002:000000a8       __imp__ZwCreateFile@44     0001c088     ntoskrnl:ntoskrnl.exe
+ 0002:000000ac       __imp__ObOpenObjectByPointer@28 0001c08c     ntoskrnl:ntoskrnl.exe
+ 0002:000000b0       __imp__PsProcessType       0001c090     ntoskrnl:ntoskrnl.exe
+ 0002:000000b0       _PsProcessType             0001c090     ntoskrnl:ntoskrnl.exe
+ 0002:000000b4       __imp__PsLookupProcessByProcessId@8 0001c094     ntoskrnl:ntoskrnl.exe
+ 0002:000000b8       __imp__MmGetSystemRoutineAddress@4 0001c098     ntoskrnl:ntoskrnl.exe
+ 0002:000000bc       __imp__RtlImageDirectoryEntryToData@16 0001c09c     ntoskrnl:ntoskrnl.exe
+ 0002:000000c0       __imp__MmMapLockedPagesSpecifyCache@24 0001c0a0     ntoskrnl:ntoskrnl.exe
+ 0002:000000c4       __imp_@IofCompleteRequest@8 0001c0a4     ntoskrnl:ntoskrnl.exe
+ 0002:000000c8       __imp__MmBuildMdlForNonPagedPool@4 0001c0a8     ntoskrnl:ntoskrnl.exe
+ 0002:000000cc       __imp__IoAllocateMdl@20    0001c0ac     ntoskrnl:ntoskrnl.exe
+ 0002:000000d0       __imp__RtlUnicodeStringToAnsiString@12 0001c0b0     ntoskrnl:ntoskrnl.exe
+ 0002:000000d4       __imp__wcsstr              0001c0b4     ntoskrnl:ntoskrnl.exe
+ 0002:000000d8       __imp___wcsupr             0001c0b8     ntoskrnl:ntoskrnl.exe
+ 0002:000000dc       __imp__RtlFreeAnsiString@4 0001c0bc     ntoskrnl:ntoskrnl.exe
+ 0002:000000e0       __imp_@ExfInterlockedRemoveHeadList@8 0001c0c0     ntoskrnl:ntoskrnl.exe
+ 0002:000000e4       __imp__RtlPrefixUnicodeString@12 0001c0c4     ntoskrnl:ntoskrnl.exe
+ 0002:000000e8       __imp__ZwDeviceIoControlFile@40 0001c0c8     ntoskrnl:ntoskrnl.exe
+ 0002:000000ec       __imp__ZwOpenFile@24       0001c0cc     ntoskrnl:ntoskrnl.exe
+ 0002:000000f0       __imp__RtlAppendUnicodeStringToString@8 0001c0d0     ntoskrnl:ntoskrnl.exe
+ 0002:000000f4       __imp__RtlAppendUnicodeToString@8 0001c0d4     ntoskrnl:ntoskrnl.exe
+ 0002:000000f8       __imp__ZwEnumerateKey@24   0001c0d8     ntoskrnl:ntoskrnl.exe
+ 0002:000000fc       __imp__ZwQueryKey@20       0001c0dc     ntoskrnl:ntoskrnl.exe
+ 0002:00000100       __imp_@IofCallDriver@8     0001c0e0     ntoskrnl:ntoskrnl.exe
+ 0002:00000104       __imp__IoBuildDeviceIoControlRequest@36 0001c0e4     ntoskrnl:ntoskrnl.exe
+ 0002:00000108       __imp__IoGetRelatedDeviceObject@4 0001c0e8     ntoskrnl:ntoskrnl.exe
+ 0002:0000010c       __imp__ObReferenceObjectByName@32 0001c0ec     ntoskrnl:ntoskrnl.exe
+ 0002:00000110       __imp__IoDriverObjectType  0001c0f0     ntoskrnl:ntoskrnl.exe
+ 0002:00000110       _IoDriverObjectType        0001c0f0     ntoskrnl:ntoskrnl.exe
+ 0002:00000114       __imp__strcpy              0001c0f4     ntoskrnl:ntoskrnl.exe
+ 0002:00000118       __imp__RtlEqualUnicodeString@12 0001c0f8     ntoskrnl:ntoskrnl.exe
+ 0002:0000011c       __imp__IoFreeWorkItem@4    0001c0fc     ntoskrnl:ntoskrnl.exe
+ 0002:00000120       __imp__IoQueueWorkItem@16  0001c100     ntoskrnl:ntoskrnl.exe
+ 0002:00000124       __imp__IoAllocateWorkItem@4 0001c104     ntoskrnl:ntoskrnl.exe
+ 0002:00000128       __imp__RtlFreeUnicodeString@4 0001c108     ntoskrnl:ntoskrnl.exe
+ 0002:0000012c       __imp__RtlAnsiStringToUnicodeString@12 0001c10c     ntoskrnl:ntoskrnl.exe
+ 0002:00000130       __imp__RtlInitAnsiString@8 0001c110     ntoskrnl:ntoskrnl.exe
+ 0002:00000134       __imp__MmIsAddressValid@4  0001c114     ntoskrnl:ntoskrnl.exe
+ 0002:00000138       __imp___except_handler3    0001c118     ntoskrnl:ntoskrnl.exe
+ 0002:0000013c       __imp__MmMapLockedPages@8  0001c11c     ntoskrnl:ntoskrnl.exe
+ 0002:00000140       __imp__atoi                0001c120     ntoskrnl:ntoskrnl.exe
+ 0002:00000144       __imp__strncpy             0001c124     ntoskrnl:ntoskrnl.exe
+ 0002:00000148       __imp__RtlInitUnicodeString@8 0001c128     ntoskrnl:ntoskrnl.exe
+ 0002:0000014c       __imp__IoCreateDevice@28   0001c12c     ntoskrnl:ntoskrnl.exe
+ 0002:00000150       __imp__IoCreateSymbolicLink@8 0001c130     ntoskrnl:ntoskrnl.exe
+ 0002:00000154       __imp__IoDeleteSymbolicLink@4 0001c134     ntoskrnl:ntoskrnl.exe
+ 0002:00000158       __imp__IoDeleteDevice@4    0001c138     ntoskrnl:ntoskrnl.exe
+ 0002:0000015c       __imp__memset              0001c13c     ntoskrnl:ntoskrnl.exe
+ 0002:00000160       __imp__strlen              0001c140     ntoskrnl:ntoskrnl.exe
+ 0002:00000164       __imp__memcpy              0001c144     ntoskrnl:ntoskrnl.exe
+ 0002:00000168       __imp___vsnprintf          0001c148     ntoskrnl:ntoskrnl.exe
+ 0002:0000016c       __imp__DbgPrint            0001c14c     ntoskrnl:ntoskrnl.exe
+ 0002:00000170       __imp__KeInitializeEvent@12 0001c150     ntoskrnl:ntoskrnl.exe
+ 0002:00000174       __imp__PsCreateSystemThread@28 0001c154     ntoskrnl:ntoskrnl.exe
+ 0002:00000178       _PsThreadType              0001c158     ntoskrnl:ntoskrnl.exe
+ 0002:00000178       __imp__PsThreadType        0001c158     ntoskrnl:ntoskrnl.exe
+ 0002:0000017c       __imp__ObReferenceObjectByHandle@24 0001c15c     ntoskrnl:ntoskrnl.exe
+ 0002:00000180       __imp__IoFreeMdl@4         0001c160     ntoskrnl:ntoskrnl.exe
+ 0002:00000184       __imp__ZwClose@4           0001c164     ntoskrnl:ntoskrnl.exe
+ 0002:00000188       \177ntoskrnl_NULL_THUNK_DATA 0001c168     ntoskrnl:ntoskrnl.exe
+ 0002:000001b0       __load_config_used         0001c190     ntoskrnl:loadcfg.obj
+ 0002:00000240       ___safe_se_handler_table   0001c220     <linker-defined>
+ 0003:000001f0       ??_C@_0CA@JDJOIPAF@warning?4?4?4buffer?5overflow?4?4?4?4?$AN?6?$AA@ 0001c430     cybersys.obj
+ 0003:00000210       ??_C@_0M@FLMDEENO@?$FLCyberSys?$FN?3?$AA@ 0001c450     cybersys.obj
+ 0003:0000021c       ??_C@_0CM@LOONDNKF@Irp?9?$DOCurrentLocation?5?$DM?$DN?5Irp?9?$DOSta@ 0001c45c     cybersys.obj
+ 0003:00000248       ??_C@_0CF@PHJMNDAC@d?3?2WinDDK?27600?416385?41?2inc?2ddk?2w@ 0001c488     cybersys.obj
+ 0003:00000898       _g_u2k_sendoffset          0001cad8     filter_xp.obj
+ 0003:00000c5c       _g_u_recv_offset_in_miniport_vista_later 0001ce9c     miniport_hookWin7.obj
+ 0003:00000c60       _g_u_send_offset_in_miniport_vista 0001cea0     miniport_hookWin7.obj
+ 0003:00000c64       _g_u_send_offset_in_miniport_win7 0001cea4     miniport_hookWin7.obj
+ 0003:00001abc       ??_C@_0BJ@HKMILGM@Irp?9?$DOCurrentLocation?5?$DO?50?$AA@ 0001dcfc     connectionstatus.obj
+ 0003:00001d48       ??_C@_0CP@JELKNBPF@GetTcpipArpRcvOldHandler?5?$CI?$CJ?5?5wha@ 0001df88     firewall.obj
+ 0003:00001e3c       _g_ReceiveHandlerOffset    0001e07c     patchwsWin7.obj
+ 0003:00001e40       _g_ReceivePacketHandlerOffset 0001e080     patchwsWin7.obj
+ 0003:00001e44       _g_ReceiveNetBufferListsHandlerOffset 0001e084     patchwsWin7.obj
+ 0003:0000219c       ??_C@_0BO@BIHLNKBG@unknown?5ethernet?5type?50x?$CF04X?6?$AA@ 0001e3dc     my_packet_redir.obj
+ 0003:000021bc       ??_C@_0BL@PCBICDHO@?5IN?5ethernet?5type?5is?5arp?$AN?6?$AA@ 0001e3fc     my_packet_redir.obj
+ 0003:000021d8       ??_C@_0BN@EGNFEPCP@?5IN?5ethernet?5type?5is?5pppoe?$AN?6?$AA@ 0001e418     my_packet_redir.obj
+ 0003:00002754       ___security_cookie         0001e994     ntoskrnl:seccook.obj
+ 0003:00002758       ___security_cookie_complement 0001e998     ntoskrnl:seccook.obj
+ 0003:0000276c       _g_pDriverObject           0001e9ac     cybersys.obj
+ 0003:00002770       _g_ObjectUdpWorkItemThread 0001e9b0     cybersys.obj
+ 0003:00002778       _g_uCr0                    0001e9b8     utils.obj
+ 0003:0000277c       _g_NetBufferListPool       0001e9bc     filter_win7.obj
+ 0003:00002780       _g_pfnNdisAllocateNetBufferListPool 0001e9c0     filter_win7.obj
+ 0003:00002784       _g_pfnNdisAllocateNetBufferAndNetBufferList 0001e9c4     filter_win7.obj
+ 0003:00002788       _g_pfnNdisFreeNetBufferListPool 0001e9c8     filter_win7.obj
+ 0003:0000278c       _g_pfnNdisCopyFromNetBufferToNetBuffer 0001e9cc     filter_win7.obj
+ 0003:00002790       _g_pfnNdisFreeNetBufferList 0001e9d0     filter_win7.obj
+ 0003:00002798       _DriverHandle              0001e9d8     miniport_hook.obj
+ 0003:0000279c       _g_CtlDevice               0001e9dc     miniport_hook.obj
+ 0003:000027a0       _g_Tcpip_TCPQueryInformationEx_FunAddr 0001e9e0     connectionstatus.obj
+ 0003:000027a4       _g_Tcpip_DispatchFunAddr   0001e9e4     connectionstatus.obj
+ 0003:000027a8       _g_InterceptTCPIPRcv       0001e9e8     firewall.obj
+ 0003:000027ac       _g_AlreadyHookTCPIP        0001e9ec     firewall.obj
+ 0003:000027b0       _g_pOriNdisSendX           0001e9f0     PatchSinffer.obj
+ 0003:000027b4       _g_pOriNdisSendXHandler    0001e9f4     PatchSinffer.obj
+ 0003:000027b8       _g_NPFReceiveHandler       0001e9f8     patchws.obj
+ 0003:000027bc       _g_NPFReceivePacketHandler 0001e9fc     patchws.obj
+ 0003:000027c0       _g_pNpfProtocolBlock       0001ea00     patchws.obj
+ 0003:000027c4       _g_bAlreadyPatchWS         0001ea04     patchws.obj
+ 0003:000027c8       _g_pNpfProtocolBlockWin7   0001ea08     patchwsWin7.obj
+ 0003:000027cc       _g_PatchwsVersion          0001ea0c     patchwsWin7.obj
+ 0003:000027d0       _g_ReceiveNetBufferListsHandler 0001ea10     patchwsWin7.obj
+ 0003:000027d4       _g_ChangingRedirectInfo    0001ea14     my_packet_redir.obj
+ 0003:000027d8       _g_SendPacketPoolHandle    0001ea18     udpTraffic.obj
+ 0003:000027dc       _g_RecvPacketPoolHandle    0001ea1c     udpTraffic.obj
+ 0003:000027e0       _g_TerminateUdpWorkThread  0001ea20     udpTraffic.obj
+ 0003:000027f0       _g_SendPacketListEvent     0001ea30     <common>
+ 0003:00002800       _g_SendPacketListHeader    0001ea40     <common>
+ 0003:00002808       _g_SendPacketListLock      0001ea48     <common>
+ 0003:00002820       _g_RedirectInfoLock2       0001ea60     <common>
+ 0003:00002a40       _g_RedirectInfo            0001ec80     <common>
+ 0003:00002a70       _g_WSPacketListEvent       0001ecb0     <common>
+ 0003:00002a80       _g_WSPacketList            0001ecc0     <common>
+ 0003:00002a90       _g_WSPacketListLock        0001ecd0     <common>
+ 0003:00002a94       _g_AskUserConnectListLock  0001ecd4     <common>
+ 0003:00002a98       _g_AskUserConnectListHeader 0001ecd8     <common>
+ 0003:00002aa0       _g_AcceptedPortListLock2   0001ece0     <common>
+ 0003:00002cc0       _g_AcceptedPortListHeader  0001ef00     <common>
+ 0003:00002d60       _g_HookTcpipFireWallLock   0001efa0     <common>
+ 0003:00002f80       _g_HookTcpipFireWallList   0001f1c0     <common>
+ 0003:00002fc0       _g_NetCardsInfoLock        0001f200     <common>
+ 0003:00002fe0       _g_NetCardsInfoHeader      0001f220     <common>
+ 0003:00003020       _g_HookedMiniports         0001f260     <common>
+ 0003:00003060       _g_HookInfoLock2           0001f2a0     <common>
+ 0003:00003280       _g_pHookInfoHeader         0001f4c0     <common>
+ 0003:000032c0       _g_u_mini_driver_block_head 0001f500     <common>
+ 0003:000032c4       _NdisWrapperHandle         0001f504     <common>
+ 0004:00000000       _CybersysDispatchCreate@8  0001f520 f   cybersys.obj
+ 0004:00000050       _CybersysDispatchClose@8   0001f570 f   cybersys.obj
+ 0004:000000a0       _CybersysDispatchDeviceControl@8 0001f5c0 f   cybersys.obj
+ 0004:000002f0       _CybersysUnload@4          0001f810 f   cybersys.obj
+ 0005:00000000       _DriverEntry@8             0001f8c0 f   cybersys.obj
+ 0005:0000014c       __IMPORT_DESCRIPTOR_ntoskrnl 0001fa0c     ntoskrnl:ntoskrnl.exe
+ 0005:00000160       __IMPORT_DESCRIPTOR_HAL    0001fa20     hal:HAL.dll
+ 0005:00000174       __IMPORT_DESCRIPTOR_NDIS   0001fa34     ndis:NDIS.SYS
+ 0005:00000188       __NULL_IMPORT_DESCRIPTOR   0001fa48     ntoskrnl:ntoskrnl.exe
+
+ entry point at        0000:00000000
+
+ Static symbols
+

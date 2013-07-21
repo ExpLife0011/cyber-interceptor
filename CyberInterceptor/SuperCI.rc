@@ -1,0 +1,351 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\SuperCI.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_TDIFW DIALOGEX 0, 0, 611, 316
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_NETWORK,"SysListView32",LVS_REPORT | LVS_AUTOARRANGE | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,8,563,149
+    LTEXT           "",IDC_STATIC_NETWORK,7,167,110,10
+    CONTROL         "TDI_EVENT_CONNECT ",IDC_CHECK_TDIEVENTCONNECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,189,86,21
+    EDITTEXT        IDC_EDIT_FWLOG,327,169,255,136,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    GROUPBOX        "Log:",IDC_STATIC,327,157,264,152
+    EDITTEXT        IDC_EDIT_PORTRULE,129,168,185,136,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    GROUPBOX        "TCP Port Rule:",IDC_STATIC,122,157,197,150
+    PUSHBUTTON      "Refresh Rule",IDC_BUTTON_ReFreshPortRul,56,273,57,26
+    LTEXT           "(comfirm connection occured from outside )",IDC_STATIC,7,219,102,17
+END
+
+IDD_DIALOG_REDIRECT DIALOGEX 0, 0, 633, 318
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO1,39,30,239,78,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Export",IDC_BUTTON_ExmportDirect,223,79,57,16
+    PUSHBUTTON      "Import",IDC_BUTTON_ImportDirect,301,79,57,16
+    EDITTEXT        IDC_EDIT_FROMIP,58,173,146,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TOIP,240,173,146,12,ES_AUTOHSCROLL
+    GROUPBOX        "Record:",IDC_STATIC,20,8,396,102
+    LTEXT           "From",IDC_STATIC,31,174,24,8
+    LTEXT           "to",IDC_STATIC,216,172,17,16
+    GROUPBOX        "Ip Redirect Panel:",IDC_STATIC,20,156,396,93
+    GROUPBOX        "",IDC_STATIC,7,125,619,9
+    PUSHBUTTON      "Add",IDC_BUTTON_ADDREDIR,223,221,57,16
+    PUSHBUTTON      "Del",IDC_BUTTON_DELDIR,301,221,57,16
+    LTEXT           "PS: *currently it does not support redirecting from local to local !",IDC_STATIC,31,198,266,16
+    LTEXT           "check this out,here is the example: add ip from 1.1.1.1 to 8.8.8.8,then run the command like this:                  ping 1.1.1.1",IDC_STATIC,445,19,118,78
+    GROUPBOX        "what am i:",IDC_STATIC,439,6,131,113
+    LTEXT           "------------------------------------------------------------",IDC_STATIC,7,127,619,8
+    PUSHBUTTON      "Clean",IDC_BUTTON_CLean,141,79,57,16
+END
+
+IDD_DIALOG_PATCHWS DIALOGEX 0, 0, 511, 316
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_PATCHLOG,15,6,189,218,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "PatchMe",IDC_BUTTON1,215,142,82,27
+    PUSHBUTTON      "Un-PatchMe",IDC_BUTTON_UNPATCH,215,96,82,27
+    LTEXT           "Enhance the ability of receiving Packet.",IDC_STATIC,214,21,124,60
+    GROUPBOX        "what is it£º",IDC_STATIC,211,10,127,81
+    LTEXT           "PS:  in theory it could probably enchance any sniffer based on protocol driver.                         PPS:   winpcap's proName is ""PACKETDRIVER""",IDC_STATIC,216,44,110,40
+    LTEXT           "ProtocolName:",IDC_STATIC_proName,213,172,52,16
+    PUSHBUTTON      "try escape sniffering",IDC_BUTTON2,375,17,82,24
+    COMBOBOX        IDC_COMBO_PRONAME,215,188,93,119,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,210,87,129,121
+END
+
+IDD_DIALOG_UDPTRAFFIC DIALOGEX 0, 0, 645, 278
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Send me",IDC_BUTTON_SENDUDP,21,225,85,29
+    EDITTEXT        IDC_EDIT_SEND,21,17,281,93,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_RECV,21,137,281,67,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    GROUPBOX        "Send:",IDC_STATIC_SENDSIZE,15,6,296,110
+    GROUPBOX        "Receive:",IDC_STATIC,15,126,296,82
+    EDITTEXT        IDC_EDIT_DESTPORT,257,238,139,14,ES_AUTOHSCROLL
+    LTEXT           "Dest Port£º",IDC_STATIC,188,238,48,13
+    EDITTEXT        IDC_EDIT_DESTIP,257,214,139,14,ES_AUTOHSCROLL
+    LTEXT           "Dest IP(wlan only)£º",IDC_STATIC,188,215,67,13
+    LTEXT           "bypassing any sniffer based on protocol driver of ndis framework FYI: it won't work,if you do this on virtual machine",IDC_STATIC,330,19,118,57
+    GROUPBOX        "what is it use for:",IDC_STATIC,320,7,155,107
+    LTEXT           "-------------------------------------------------",IDC_STATIC,7,116,631,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_TDIFW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 604
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 309
+    END
+
+    IDD_DIALOG_REDIRECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 626
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 311
+    END
+
+    IDD_DIALOG_PATCHWS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 504
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 309
+    END
+
+    IDD_DIALOG_UDPTRAFFIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 638
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 271
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "List"
+    BEGIN
+        MENUITEM "Refresh",                     ID_LIST_32771
+        MENUITEM "LocateFile",                  ID_LIST_LOCATEFILE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "CyberInterceptor Application"
+            VALUE "FileVersion", "1, 0, 0, 0"
+            VALUE "InternalName", "CyberInterceptor"
+            VALUE "LegalCopyright", "Copyright (C) 2013"
+            VALUE "OriginalFilename", "CyberInterceptor.exe"
+            VALUE "ProductName", "CyberInterceptor Application"
+            VALUE "ProductVersion", "1, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON2               ICON                    "res\\dolphin.ico"
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 226, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About CyberInterceptor"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            134,IDC_STATIC,14,14,20,20
+    LTEXT           "CyberInterceptor, Version 1.0",IDC_STATIC,51,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,51,26,167,8
+    DEFPUSHBUTTON   "OK",IDOK,168,82,50,14,WS_GROUP
+    LTEXT           "Author: 5771067@qq.com",IDC_STATIC,51,53,152,8
+    LTEXT           "Blog:     http://hi.baidu.com/zhouws1011/home",IDC_STATIC,51,65,154,8
+    GROUPBOX        "",IDC_STATIC,38,40,180,9
+END
+
+IDD_SUPERCI_DIALOG DIALOGEX 0, 0, 581, 326
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_APPWINDOW
+CAPTION "CyberInterceptor  ( For XP/2003/Win7 32bit )"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB_MAIN,"SysTabControl32",TCS_SCROLLOPPOSITE | TCS_MULTILINE | TCS_RAGGEDRIGHT,7,7,567,311
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 218
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_SUPERCI_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 574
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 319
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About SuperCI..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\SuperCI.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
