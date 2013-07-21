@@ -16,7 +16,7 @@ void ReleasePenddingCheckPortIrp()
 	DWORD	dwRet;
 	BOOL bRet;
 	g_ReleaseingPendding	=true;
-	bRet = DeviceIoControl(g_SuperCIHandle, IOCTL_ReleasePENDDINGCHECKPORT, NULL, 0, NULL, NULL,&dwRet, NULL);
+	bRet = DeviceIoControl(g_CyberHandleASyn, IOCTL_ReleasePENDDINGCHECKPORT, NULL, 0, NULL, NULL,&dwRet, NULL);
 
 
 }
@@ -48,7 +48,7 @@ BOOL CNetworkCentre::GetTcpInfo(void)
 	BOOL	bRet	=	TRUE;
 	do 
 	{
-		bRet = DeviceIoControl(g_SuperCIHandle, IOCTL_GET_TCPINFO, NULL, 0, NULL, NULL,&dwRet, NULL);
+		bRet = DeviceIoControl(g_CyberHandleASyn, IOCTL_GET_TCPINFO, NULL, 0, NULL, NULL,&dwRet, NULL);
 		if (!bRet)
 		{
 			break;
@@ -70,7 +70,7 @@ BOOL CNetworkCentre::GetTcpInfo(void)
 		}
 		ZeroMemory(m_pTcpBuffer, dwBufferSize);
 		
-		bRet = DeviceIoControl(g_SuperCIHandle, IOCTL_GET_TCPINFO, NULL, 0, m_pTcpBuffer, dwBufferSize,&dwRet, NULL);
+		bRet = DeviceIoControl(g_CyberHandleASyn, IOCTL_GET_TCPINFO, NULL, 0, m_pTcpBuffer, dwBufferSize,&dwRet, NULL);
 		if (!bRet)
 		{
 			delete	m_pTcpBuffer;m_pTcpBuffer=NULL;dwBufferSize	=	0;
@@ -94,7 +94,7 @@ BOOL CNetworkCentre::GetUdpInfo(void)
 	BOOL	bRet	=	TRUE;
 	do 
 	{
-		bRet = DeviceIoControl(g_SuperCIHandle, IOCTL_GET_UDPINFO, NULL, 0, NULL, NULL,&dwRet, NULL);
+		bRet = DeviceIoControl(g_CyberHandleASyn, IOCTL_GET_UDPINFO, NULL, 0, NULL, NULL,&dwRet, NULL);
 		if (!bRet)
 		{
 			break;
@@ -113,7 +113,7 @@ BOOL CNetworkCentre::GetUdpInfo(void)
 			m_pUdpBuffer	=	new char[dwBufferSize];
 		}
 		ZeroMemory(m_pUdpBuffer, dwBufferSize);
-		bRet = DeviceIoControl(g_SuperCIHandle, IOCTL_GET_UDPINFO, NULL, 0, m_pUdpBuffer, dwBufferSize,&dwRet, NULL);
+		bRet = DeviceIoControl(g_CyberHandleASyn, IOCTL_GET_UDPINFO, NULL, 0, m_pUdpBuffer, dwBufferSize,&dwRet, NULL);
 		if (!bRet)
 		{
 			delete	m_pUdpBuffer;m_pUdpBuffer=NULL;dwBufferSize	=	0;
@@ -148,7 +148,7 @@ BOOL CNetworkCentre::GetProcessPathByPid(int dwPid, PVOID	*pPath)
 	}
 	do 
 	{
-		bRet = DeviceIoControl(g_SuperCIHandle, IOCTL_GPATHBYPID, &dwPid, sizeof(dwPid), 0, 0,&dwRet, NULL);
+		bRet = DeviceIoControl(g_CyberHandleASyn, IOCTL_GPATHBYPID, &dwPid, sizeof(dwPid), 0, 0,&dwRet, NULL);
 		if (!bRet)
 		{
 			DWORD	dwError	=	GetLastError();
@@ -162,7 +162,7 @@ BOOL CNetworkCentre::GetProcessPathByPid(int dwPid, PVOID	*pPath)
 		pTmp	=	(PUCHAR)new char[dwBufferSize];
 		ZeroMemory(pTmp, dwBufferSize);
 		dwRet	=	0;
-		bRet = DeviceIoControl(g_SuperCIHandle, IOCTL_GPATHBYPID, &dwPid, sizeof(dwPid), pTmp, dwBufferSize,&dwRet, NULL);
+		bRet = DeviceIoControl(g_CyberHandleASyn, IOCTL_GPATHBYPID, &dwPid, sizeof(dwPid), pTmp, dwBufferSize,&dwRet, NULL);
 		if (!bRet)
 		{
 			break;
@@ -213,7 +213,7 @@ BOOL	CNetworkCentre::AskUserForPermission()
 	DWORD	dwLastError=0;
 	FIREWALL_ASKUSER	fas;
 	ZeroMemory(&fas, sizeof(FIREWALL_ASKUSER));
-	bRet	=	 DeviceIoControl(g_SuperCIHandleASyn, IOCTL_PENDDINGCHECKPORT,  NULL, NULL, (PVOID)&fas, sizeof(fas), &dwRet, &varOverLapped);
+	bRet	=	 DeviceIoControl(g_CyberHandleASyn, IOCTL_PENDDINGCHECKPORT,  NULL, NULL, (PVOID)&fas, sizeof(fas), &dwRet, &varOverLapped);
 	dwLastError	=	GetLastError();
 	sprintf(strDebug,"AskUserForPermission() send IOCTL_PENDDINGCHECKPORT bRet=%d, LastError:%d\n", bRet, dwLastError);
 	OutputDebugString(strDebug);
@@ -248,7 +248,7 @@ BOOL	CNetworkCentre::AskUserForPermission()
 	InterlockedDecrement(&g_CurrentPenddingAskUserEventNumber);
 	SetUpPenddingAskUserEvent();
 
-	bRet	=	 DeviceIoControl(g_SuperCIHandle, IOCTL_RESPONSEPORTASK, (PVOID)&fas, sizeof(fas), NULL, NULL,&dwRet, NULL);
+	bRet	=	 DeviceIoControl(g_CyberHandleASyn, IOCTL_RESPONSEPORTASK, (PVOID)&fas, sizeof(fas), NULL, NULL,&dwRet, NULL);
 	return bRet;
 }
 //////////////////////////////////////////////////////////////////////////
@@ -299,11 +299,11 @@ BOOL	CNetworkCentre::SetUpFW(BOOL bSet)
 	BOOL	bRet;
 	if (bSet)
 	{
-			bRet	=	 DeviceIoControl(g_SuperCIHandle, IOCTL_SETUPFW, NULL, 0, NULL, NULL,&dwRet, NULL);
+			bRet	=	 DeviceIoControl(g_CyberHandleASyn, IOCTL_SETUPFW, NULL, 0, NULL, NULL,&dwRet, NULL);
 	}
 	else
 	{
-			bRet	=	 DeviceIoControl(g_SuperCIHandle, IOCTL_UNSETFW, NULL, 0, NULL, NULL,&dwRet, NULL);
+			bRet	=	 DeviceIoControl(g_CyberHandleASyn, IOCTL_UNSETFW, NULL, 0, NULL, NULL,&dwRet, NULL);
 	}
 	return TRUE;
 }
@@ -320,7 +320,7 @@ BOOL	CNetworkCentre::GetPortRule(void **PortStatusHeader, int &iNumber)
 	char	*pBuffer	=	NULL;
 	do 
 	{
-		bRet = DeviceIoControl(g_SuperCIHandle, IOCTL_GETPORTSTATUS, NULL, 0, NULL, NULL,&dwRet, NULL);
+		bRet = DeviceIoControl(g_CyberHandleASyn, IOCTL_GETPORTSTATUS, NULL, 0, NULL, NULL,&dwRet, NULL);
 		if (!bRet)
 		{
 			break;
@@ -330,7 +330,7 @@ BOOL	CNetworkCentre::GetPortRule(void **PortStatusHeader, int &iNumber)
 		pBuffer	=	new char[dwBufferSize];
 
 		ZeroMemory(pBuffer, dwBufferSize);
-		bRet = DeviceIoControl(g_SuperCIHandle, IOCTL_GETPORTSTATUS, NULL, 0, pBuffer, dwBufferSize,&dwRet, NULL);
+		bRet = DeviceIoControl(g_CyberHandleASyn, IOCTL_GETPORTSTATUS, NULL, 0, pBuffer, dwBufferSize,&dwRet, NULL);
 		if (!bRet)
 		{
 

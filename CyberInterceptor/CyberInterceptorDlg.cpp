@@ -23,8 +23,8 @@
 //////////////////////////////////////////////////////////////////////////
 
 
-HANDLE	g_SuperCIHandle;
-HANDLE	g_SuperCIHandleASyn;
+
+HANDLE	g_CyberHandleASyn;
 CDriverLoader	g_drvLoader;
 
 CSuperCIDlg	*g_this=NULL;
@@ -45,8 +45,11 @@ bool	UninitAPP()
 
 
 	ReleasePenddingCheckPortIrp();	//不释放这些pendding的话，不能卸载驱动
-	CloseHandle(g_SuperCIHandle);
-	CloseHandle(g_SuperCIHandleASyn);
+	if (g_CyberHandleASyn)
+	{
+		CloseHandle(g_CyberHandleASyn);g_CyberHandleASyn=NULL;
+	}
+	
 	g_drvLoader.MyZwUnloadDriver(NULL, NULL);
 	BOOL	bRet	=	TRUE;
 
@@ -76,7 +79,7 @@ bool	InitAPP()
 	}
 
 
-	g_SuperCIHandleASyn = CreateFileA( CYBERSYS_WIN32_DEVICE_NAME_A,  
+	g_CyberHandleASyn = CreateFileA( CYBERSYS_WIN32_DEVICE_NAME_A,  
 		GENERIC_READ | GENERIC_WRITE,
 		FILE_SHARE_READ | FILE_SHARE_WRITE,
 		NULL,
@@ -84,7 +87,7 @@ bool	InitAPP()
 		FILE_FLAG_NO_BUFFERING|FILE_FLAG_OVERLAPPED,
 		NULL);
 
-	if ( g_SuperCIHandleASyn == INVALID_HANDLE_VALUE ) 
+	if ( g_CyberHandleASyn == INVALID_HANDLE_VALUE ) 
 	{
 
 		CString cs;
@@ -92,7 +95,7 @@ bool	InitAPP()
 		AfxMessageBox(cs);
 		return false;
 	}
-	g_SuperCIHandle	=	g_SuperCIHandleASyn;
+
 	return 1;
 
 

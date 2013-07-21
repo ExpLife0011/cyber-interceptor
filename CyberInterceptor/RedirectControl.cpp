@@ -13,7 +13,12 @@ CRedirectControl::CRedirectControl(void)
 
 CRedirectControl::~CRedirectControl(void)
 {
-
+	vector<PIPINFO>::iterator it1;
+	for (it1 = m_LocalIps.begin(); it1!=m_LocalIps.end(); it1++)
+	{
+		delete *it1;
+	}
+	m_LocalIps.clear();
 
 }
 //////////////////////////////////////////////////////////////////////////
@@ -97,7 +102,7 @@ BOOL CRedirectControl::AddRedirectIP(TCHAR *fromIP, TCHAR *toIP )
 	pSRI->bLocal	=	IsLocalIP(toIP);
 	
 	DWORD	dwRet=0;
-	BOOL bret = DeviceIoControl(g_SuperCIHandle, IOCTL_ADD_RIDIRECTINFO, pSRI, sizeof(SET_REDIRECT_INFO), NULL, NULL,&dwRet, NULL);
+	BOOL bret = DeviceIoControl(g_CyberHandleASyn, IOCTL_ADD_RIDIRECTINFO, pSRI, sizeof(SET_REDIRECT_INFO), NULL, NULL,&dwRet, NULL);
 	if (!bret)
 	{
 		delete pSRI;
@@ -157,7 +162,7 @@ BOOL CRedirectControl::DelRedirectIP(TCHAR *fromIP, TCHAR *toIP )
 		return false;
 	}
 	DWORD	dwRet=0;
-	BOOL bret = DeviceIoControl(g_SuperCIHandle, IOCTL_DEL_RIDIRECTINFO, pSRI, sizeof(SET_REDIRECT_INFO), NULL, NULL,&dwRet, NULL);
+	BOOL bret = DeviceIoControl(g_CyberHandleASyn, IOCTL_DEL_RIDIRECTINFO, pSRI, sizeof(SET_REDIRECT_INFO), NULL, NULL,&dwRet, NULL);
 	if (!bret)
 	{
 			MessageBoxA(NULL,"IOCTL_DEL_RIDIRECTINFO Fail","test",NULL);
@@ -214,7 +219,7 @@ BOOL	CRedirectControl::FixGatewayMac()
 		return false;
 	}
 	dwRet=0;
-	BOOL bret = DeviceIoControl(g_SuperCIHandle, IOCTL_FIX_GATEWAYMAC, ptmp, dwBufferSize, NULL, NULL,&dwRet, NULL);
+	BOOL bret = DeviceIoControl(g_CyberHandleASyn, IOCTL_FIX_GATEWAYMAC, ptmp, dwBufferSize, NULL, NULL,&dwRet, NULL);
 	delete ptmp;
 	if (!bret)
 	{
@@ -237,7 +242,7 @@ int CRedirectControl::Clean(void)
 	{
 		pSRI	=	*it1;
 		DWORD	dwRet=0;
-		BOOL bret = DeviceIoControl(g_SuperCIHandle, IOCTL_DEL_RIDIRECTINFO, pSRI, sizeof(SET_REDIRECT_INFO), NULL, NULL,&dwRet, NULL);
+		BOOL bret = DeviceIoControl(g_CyberHandleASyn, IOCTL_DEL_RIDIRECTINFO, pSRI, sizeof(SET_REDIRECT_INFO), NULL, NULL,&dwRet, NULL);
 		if (!bret)
 		{
 			return 0;	//如果这里进行到一步的时候，数据就不一致了

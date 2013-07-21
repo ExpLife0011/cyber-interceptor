@@ -87,7 +87,7 @@ BOOL CPatchWireShark::OnInitDialog()
 	DWORD	dwRet=0;
 	DWORD	dwRetBuffer=0;
 	DWORD	dwSel=0;
-	bool bret = (bool)DeviceIoControl(g_SuperCIHandle, IOCTL_GETPROTOCOLLIST , pProList, sizeof(pProList), pProList, sizeof(pProList), &dwRet, NULL);
+	bool bret = (bool)DeviceIoControl(g_CyberHandleASyn, IOCTL_GETPROTOCOLLIST , pProList, sizeof(pProList), pProList, sizeof(pProList), &dwRet, NULL);
 	if (bret)
 	{
 		DWORD dwNumber	=	dwRet/(sizeof(Protocol_Lists));

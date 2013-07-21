@@ -40,7 +40,7 @@ bool CUdpTrafficControl::SendUdpPacket(PVOID pBuffer, int len,ULONG dstIP, USHOR
 
 	//“Ï≤Ω∂º∏„∑≥¡À
 	DWORD	dwRet=0;
-	bool bret = DeviceIoControl(g_SuperCIHandle, IOCTL_SEND_UDP, pSendInfo, dwBufferSize, NULL, NULL,&dwRet, &varOverLapped);
+	bool bret = DeviceIoControl(g_CyberHandleASyn, IOCTL_SEND_UDP, pSendInfo, dwBufferSize, NULL, NULL,&dwRet, &varOverLapped);
 	DWORD dwLastError	=	GetLastError();
 	char 	strOutput[512];
 	sprintf(strOutput, "DeviceIoControl IOCTL_SEND_UDP return %d, Lasterror %d\r\n", bret , GetLastError());
@@ -62,7 +62,7 @@ bool CUdpTrafficControl::SendUdpPacket(PVOID pBuffer, int len,ULONG dstIP, USHOR
 		return false;
 	}
 	DWORD dwBytes=0;
-	if (!GetOverlappedResult(g_SuperCIHandle, &varOverLapped, &dwBytes, FALSE))
+	if (!GetOverlappedResult(g_CyberHandleASyn, &varOverLapped, &dwBytes, FALSE))
 	{
 		return false;
 	}

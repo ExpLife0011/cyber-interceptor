@@ -52,9 +52,8 @@ typedef struct __IPINFO__
 #include "NetworkCentre.h"
 #include "CommFun.h"
 
-extern HANDLE	g_SuperCIHandle;
 
-extern HANDLE	g_SuperCIHandleASyn;
+extern HANDLE	g_CyberHandleASyn;
 
 extern CRedirectControl	g_RedirectCtrltor;
 
